@@ -1,6 +1,8 @@
-# Magia das Flores Floricultura
+# Quinta Essência Floricultura
 
-Site institucional da Magia das Flores, floricultura em Pomerode, Santa Catarina.
+Site institucional da Quinta Essência, floricultura no bairro São João do Rio Vermelho, em Florianópolis (SC).
+
+O site apresenta buquês e arranjos, informa endereço e telefones e direciona pedidos para o WhatsApp e o Instagram da floricultura.
 
 ## Desenvolvimento
 

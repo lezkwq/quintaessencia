@@ -2,32 +2,30 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Menu, X, Star, MapPin, Instagram } from "lucide-react";
 
-import logo from "@/assets/logo-magia-das-flores.png";
-import heroImg from "@/assets/arranjo-colorido.jpg";
-import floresLoja from "@/assets/flores-na-loja.jpg";
-import buqueRosas from "@/assets/buque-rosas.jpg";
-import buqueGirassois from "@/assets/buque-girassois.jpg";
-import buqueRosa from "@/assets/buque-rosas-claras.jpg";
-import buqueAzul from "@/assets/buque-azul-e-amarelo.jpg";
-import buqueVariado from "@/assets/buque-variado.jpg";
-import buqueHortensias from "@/assets/buque-hortensias.jpg";
-import buqueLirios from "@/assets/buque-lirios-e-rosas.jpg";
-import arranjoPresente from "@/assets/arranjo-presente.jpg";
+import logo from "@/assets/quinta-essencia-marca.jpg";
+import heroImg from "@/assets/buque-rosas-e-alstroemerias.webp";
+import buqueColorido from "@/assets/buque-rosas-coloridas.webp";
+import buqueRomantico from "@/assets/buque-romantico.jpg";
+import arranjoLirios from "@/assets/arranjo-colorido-lirios.jpg";
+import buqueRosasRosa from "@/assets/buque-rosas-rosa.jpg";
+import buqueRosasVermelhas from "@/assets/buque-rosas-vermelhas.jpg";
+import buqueRosasMisto from "@/assets/buque-rosas-vermelhas-e-brancas.jpg";
+import buqueGirassol from "@/assets/buque-girassol-e-rosa.jpg";
 
-const WA = "https://wa.me/5547991280394";
+const WA = "https://wa.me/5548999987905";
 const waLink = (msg: string) => `${WA}?text=${encodeURIComponent(msg)}`;
-const MSG_MAIN = "Olá! Vim pelo site da Magia das Flores e gostaria de conhecer os arranjos disponíveis.";
-const MSG_ITEM = "Olá! Gostaria de saber mais sobre este arranjo que vi no site da Magia das Flores.";
-const INSTAGRAM = "https://www.instagram.com/_magiadasflores_/";
-const MAPS = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("R. Hermann Weege, 1568, Ribeirão Areia, Pomerode, SC, 89107-000");
+const MSG_MAIN = "Oi! Vim pelo site da Quinta Essência e queria conhecer os arranjos disponíveis 🌷";
+const MSG_ITEM = "Oi! Vi esse arranjo no site da Quinta Essência e queria saber mais 🌷";
+const INSTAGRAM = "https://www.instagram.com/quintaessenciafloricultura/";
+const MAPS = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Floricultura Quinta Essência, R. Cândido Pereira dos Anjos, 2731, São João do Rio Vermelho, Florianópolis, SC, 88060-300");
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Magia das Flores — Floricultura em Pomerode" },
-      { name: "description", content: "Flores, buquês e arranjos da Magia das Flores em Pomerode, SC. Faça seu pedido pelo WhatsApp ou visite nossa floricultura." },
-      { property: "og:title", content: "Magia das Flores — Cultivando o amor em Pomerode" },
-      { property: "og:description", content: "Buquês, flores e presentes para transformar momentos. Encomende pelo WhatsApp ou visite a Magia das Flores." },
+      { title: "Quinta Essência Floricultura — Florianópolis, SC" },
+      { name: "description", content: "Flores, plantas e presentes feitos com carinho pela Quinta Essência, no Rio Vermelho, Florianópolis. Faça seu pedido pelo WhatsApp." },
+      { property: "og:title", content: "Quinta Essência Floricultura · Florianópolis" },
+      { property: "og:description", content: "Buquês, flores e plantas pra deixar qualquer momento mais especial. Fale com a Quinta Essência." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -58,15 +56,14 @@ function WhatsIcon({ className = "" }: { className?: string }) {
 }
 
 const gallery = [
-  { src: buqueRosas, alt: "Buquê de rosas vermelhas e cor-de-rosa com flores brancas", pos: "object-center" },
-  { src: floresLoja, alt: "Variedade de flores frescas expostas na floricultura", pos: "object-[50%_60%]" },
-  { src: buqueGirassois, alt: "Buquê alegre de girassóis e flores cor-de-rosa", pos: "object-center" },
-  { src: buqueRosa, alt: "Buquê delicado de rosas cor-de-rosa com presente", pos: "object-center" },
-  { src: buqueAzul, alt: "Buquê de girassóis com flores azuis e laço azul", pos: "object-center" },
-  { src: buqueVariado, alt: "Arranjo colorido de flores variadas para presentear", pos: "object-center" },
-  { src: buqueHortensias, alt: "Buquê com hortênsia azul e flores em tons suaves", pos: "object-center" },
-  { src: buqueLirios, alt: "Buquê de lírios cor-de-rosa com flores variadas", pos: "object-center" },
-  { src: arranjoPresente, alt: "Arranjo de flores com pelúcia e flores coloridas", pos: "object-center" },
+  { src: buqueColorido, alt: "Buquê colorido de rosas, flores amarelas e folhagens", pos: "object-center" },
+  { src: buqueRomantico, alt: "Buquê de rosas vermelhas e brancas com flores delicadas", pos: "object-center" },
+  { src: arranjoLirios, alt: "Arranjo alegre com lírios, rosas e flores variadas", pos: "object-center" },
+  { src: buqueRosasRosa, alt: "Buquê romântico de rosas cor-de-rosa", pos: "object-center" },
+  { src: buqueRosasVermelhas, alt: "Buquê de rosas vermelhas com mosquitinho", pos: "object-center" },
+  { src: buqueRosasMisto, alt: "Buquê clássico de rosas vermelhas e brancas", pos: "object-center" },
+  { src: buqueGirassol, alt: "Buquê com girassol, rosa vermelha e flores brancas", pos: "object-center" },
+  { src: heroImg, alt: "Buquê de rosas brancas e flores cor-de-rosa", pos: "object-center" },
 ];
 
 const desktopScatter = [
@@ -142,15 +139,16 @@ function Index() {
       <section className="relative isolate h-[100svh] min-h-[600px] overflow-hidden bg-wine-deep">
         <img
           src={heroImg}
-          alt="Arranjo de flores coloridas da Magia das Flores"
+          alt="Buquê artesanal da Quinta Essência Floricultura"
           fetchPriority="high"
           className="animate-slow-zoom absolute inset-0 -z-10 h-full w-full object-cover object-[50%_40%] md:object-[50%_35%]"
         />
         <div className="absolute inset-0 -z-10 bg-hero-veil" />
 
         <header className="relative z-20 flex items-center justify-between px-5 pt-5 md:px-12 md:pt-8">
-          <a href="#" aria-label="Magia das Flores — início" className="block">
-            <img src={logo} alt="Logotipo da Magia das Flores Floricultura" width={64} height={64} className="h-14 w-14 md:h-16 md:w-16" />
+          <a href="#" aria-label="Quinta Essência — início" className="flex items-center gap-3 text-on-photo">
+            <img src={logo} alt="" width={48} height={48} className="h-11 w-11 rounded-full object-cover md:h-12 md:w-12" />
+            <span className="font-display text-2xl leading-none md:text-3xl">Quinta Essência</span>
           </a>
           <nav className="hidden items-center gap-10 text-sm text-on-photo md:flex" aria-label="Principal">
             {nav.map((n) => (
@@ -183,12 +181,12 @@ function Index() {
 
         <div className="absolute inset-x-0 bottom-0 px-5 pb-10 md:px-12 md:pb-16">
           <div className="max-w-3xl text-on-photo">
-            <p className="animate-rise text-sm tracking-wide text-on-photo/85" style={{ animationDelay: "300ms" }}>Floricultura em Pomerode, Santa Catarina</p>
+            <p className="animate-rise text-sm tracking-wide text-on-photo/85" style={{ animationDelay: "300ms" }}>Floricultura no Rio Vermelho · Florianópolis</p>
             <h1 className="animate-rise mt-3 font-display text-[3.25rem] font-medium leading-[0.95] md:text-8xl" style={{ animationDelay: "450ms" }}>
-              Flores que falam <em className="font-normal">por você.</em>
+              Um carinho em forma <em className="font-normal">de flor.</em>
             </h1>
             <p className="animate-rise mt-5 max-w-md text-base leading-relaxed opacity-90 md:text-lg" style={{ animationDelay: "650ms" }}>
-              Buquês e arranjos para presentear, celebrar e surpreender alguém especial.
+              Flores, plantas e arranjos pra presentear, celebrar e surpreender quem você ama.
             </p>
             <div className="animate-rise mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6" style={{ animationDelay: "850ms" }}>
               <a href={waLink(MSG_MAIN)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-crimson px-7 py-4 font-medium text-on-photo transition-transform hover:-translate-y-0.5">
@@ -272,12 +270,12 @@ function Index() {
               />
             ))}
             <div className="relative z-10 grid max-w-[40rem] justify-items-center gap-5 text-center">
-              <p className="text-xs uppercase tracking-[0.24em] text-crimson">Magia das Flores · Pomerode</p>
+              <p className="text-xs uppercase tracking-[0.24em] text-crimson">Quinta Essência · Rio Vermelho</p>
               <h2 className="font-display text-4xl leading-[1.05] text-wine 2xl:text-6xl">
-                Um detalhe que transforma qualquer momento.
+                Tem coisa melhor que receber flores?
               </h2>
               <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-                Buquês e arranjos feitos para presentear, celebrar e surpreender.
+                A gente prepara tudo com muito carinho. Escolha o seu e chama a gente pra combinar 🌷
               </p>
               <a href={waLink(MSG_MAIN)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-crimson px-6 py-4 font-medium text-on-photo transition-transform hover:-translate-y-0.5">
                 <WhatsIcon className="h-5 w-5" /> Escolher meu arranjo
@@ -291,7 +289,7 @@ function Index() {
       <section className="bg-wine text-on-photo">
         <div className="grid md:grid-cols-2">
           <Reveal className="h-full">
-            <img src={buqueRosas} alt="Buquê de rosas vermelhas da Magia das Flores" loading="lazy" className="h-[75svh] w-full object-cover object-[50%_55%] md:h-full md:min-h-[720px]" />
+            <img src={buqueRosasMisto} alt="Buquê de rosas vermelhas e brancas da Quinta Essência" loading="lazy" className="h-[75svh] w-full object-cover object-[50%_55%] md:h-full md:min-h-[720px]" />
           </Reveal>
           <div className="flex items-center px-6 py-16 md:px-16 lg:px-24">
             <Reveal>
@@ -300,7 +298,7 @@ function Index() {
                 Presentes que fazem <em>momentos especiais.</em>
               </h2>
               <p className="mt-6 max-w-md leading-relaxed opacity-85">
-                Flores que transformam momentos simples em experiências especiais. Escolha seu arranjo e fale com a nossa equipe.
+                Um buquê muda o dia, né? Conta pra gente o que você imaginou que a gente prepara com carinho 💐
               </p>
               <a href={waLink(MSG_MAIN)} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 border border-on-photo/50 px-7 py-4 transition-colors hover:bg-on-photo hover:text-wine">
                 <WhatsIcon className="h-5 w-5" /> Conversar com a floricultura
@@ -317,9 +315,9 @@ function Index() {
         </Reveal>
         <ol className="mt-12 grid gap-10 md:mt-16 md:grid-cols-3 md:gap-12">
           {[
-            ["Escolha o arranjo", "Veja os buquês acima ou fale com a gente sobre o que você imagina."],
-            ["Converse pelo WhatsApp", "A equipe da Magia das Flores confirma a disponibilidade e combina os detalhes com você."],
-            ["Retire ou receba", "Combine a retirada na floricultura ou consulte a entrega para sua região."],
+            ["Escolha suas flores", "Viu um buquê que gostou? Ou já tem uma ideia? Conta pra gente."],
+            ["Chama a gente", "A gente conversa sobre os detalhes e confirma tudo direitinho com você."],
+            ["Receba com carinho", "Pode retirar na loja ou combinar a entrega com a gente 🌷"],
           ].map(([t, d], i) => (
             <Reveal key={t} delay={i * 120}>
               <li className="border-t border-border pt-6">
@@ -341,15 +339,15 @@ function Index() {
       <section className="border-y border-border bg-ivory px-5 py-12 md:px-12">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
-            <span className="font-display text-5xl text-wine">4,8</span>
+            <span className="font-display text-5xl text-wine">4,7</span>
             <div>
-              <div className="flex gap-0.5 text-crimson" aria-label="4,8 de 5 estrelas">
-                {[0, 1, 2, 3, 4].map((i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} opacity={i === 4 ? 0.45 : 1} />)}
+              <div className="flex gap-0.5 text-crimson" aria-label="4,7 de 5 estrelas">
+                {[0, 1, 2, 3, 4].map((i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} opacity={i === 4 ? 0.7 : 1} />)}
               </div>
-              <p className="mt-1 text-sm text-muted-foreground">80 avaliações no Google</p>
+              <p className="mt-1 text-sm text-muted-foreground">152 avaliações no Google</p>
             </div>
           </div>
-          <p className="max-w-md font-display text-xl italic text-foreground md:text-2xl">Cultivando o amor e criando experiências que ficam em Pomerode.</p>
+          <p className="max-w-md font-display text-xl italic text-foreground md:text-2xl">Flores lindas, atendimento com carinho e um presente pra guardar no coração.</p>
         </div>
       </section>
 
@@ -357,35 +355,36 @@ function Index() {
       <footer id="contato" className="bg-wine-deep px-5 pb-28 pt-20 text-on-photo md:px-12 md:pb-16">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-6">
-            <h2 className="font-display text-5xl leading-none md:text-7xl">Vamos montar <em>o seu?</em></h2>
+            <h2 className="font-display text-5xl leading-none md:text-7xl">Vamos escolher <em>suas flores?</em></h2>
             <a href={waLink(MSG_MAIN)} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex flex-nowrap items-center gap-2 whitespace-nowrap bg-crimson px-7 py-4 font-medium transition-transform hover:-translate-y-0.5">
-              <WhatsIcon className="h-5 w-5" /> WhatsApp (47) 99128-0394
+              <WhatsIcon className="h-5 w-5" /> WhatsApp (48) 99998-7905
             </a>
-            <a href="tel:+554733871425" className="mt-4 block w-fit text-sm underline underline-offset-4 opacity-85 hover:opacity-100">Ligar: (47) 3387-1425</a>
+            <a href="tel:+5548998537777" className="mt-4 block w-fit text-sm underline underline-offset-4 opacity-85 hover:opacity-100">Ou ligue: (48) 99853-7777</a>
+            <a href="tel:+554832347040" className="mt-2 block w-fit text-sm underline underline-offset-4 opacity-85 hover:opacity-100">Loja: (48) 3234-7040</a>
           </div>
           <div className="grid gap-8 text-sm sm:grid-cols-2 md:col-span-6">
             <div>
               <p className="text-blush">Endereço</p>
               <a href={MAPS} target="_blank" rel="noopener noreferrer" className="mt-2 flex gap-2 leading-relaxed opacity-90 hover:opacity-100">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0" /> R. Hermann Weege, 1568 — Ribeirão Areia, Pomerode, SC · 89107-000
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0" /> R. Cândido Pereira dos Anjos, 2731 — São João do Rio Vermelho, Florianópolis, SC · 88060-300
               </a>
             </div>
             <div>
               <p className="text-blush">Atendimento</p>
-              <p className="mt-2 leading-relaxed opacity-90">Visite a floricultura ou consulte a disponibilidade de entrega pelo WhatsApp.</p>
+              <p className="mt-2 leading-relaxed opacity-90">Temos flores, plantas e jardinagem. Fazemos entrega e retirada na loja. Chama a gente pra consultar 🌿</p>
               <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 opacity-90 hover:opacity-100">
-                <Instagram className="h-4 w-4" /> @_magiadasflores_
+                <Instagram className="h-4 w-4" /> @quintaessenciafloricultura
               </a>
             </div>
           </div>
         </div>
         <div className="mt-16 flex items-center justify-between border-t border-on-photo/15 pt-8">
-          <img src={logo} alt="Logotipo da Magia das Flores Floricultura" loading="lazy" className="h-20 w-20" />
-          <p className="text-xs opacity-60">© {new Date().getFullYear()} Magia das Flores Floricultura</p>
+          <a href="#" className="font-display text-3xl">Quinta Essência</a>
+          <p className="text-xs opacity-60">© {new Date().getFullYear()} Quinta Essência Floricultura</p>
         </div>
       </footer>
 
-      <a href={waLink(MSG_MAIN)} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Magia das Flores no WhatsApp" className="fixed bottom-5 right-5 z-40 flex h-14 w-14 flex-nowrap items-center justify-center overflow-hidden rounded-full bg-botanic text-on-photo shadow-lg transition-transform hover:scale-105">
+      <a href={waLink(MSG_MAIN)} target="_blank" rel="noopener noreferrer" aria-label="Falar com a Quinta Essência no WhatsApp" className="fixed bottom-5 right-5 z-40 flex h-14 w-14 flex-nowrap items-center justify-center overflow-hidden rounded-full bg-botanic text-on-photo shadow-lg transition-transform hover:scale-105">
         <WhatsIcon className="h-7 w-7" />
       </a>
     </main>
